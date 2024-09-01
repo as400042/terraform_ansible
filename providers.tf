@@ -1,22 +1,23 @@
-terraform {
-  required_version = ">=0.12"
+variable "client_secret" {
+}
 
+# We strongly recommend using the required_providers block to set the
+# Azure Provider source and version being used
+terraform {
   required_providers {
-    azapi = {
-      source  = "azure/azapi"
-      version = "~>1.5"
-    }
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = "~>2.0"
-    }
-    random = {
-      source  = "hashicorp/random"
-      version = "~>3.0"
+      version = "=3.0.0"
     }
   }
 }
 
+# Configure the Microsoft Azure Provider
 provider "azurerm" {
   features {}
+
+  client_id       = "var.client_id"
+  client_secret   = "var.client_secret"
+  tenant_id       = "var.tenant_id"
+  subscription_id = "var.sub_id"
 }
