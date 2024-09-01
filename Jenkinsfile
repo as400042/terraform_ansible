@@ -33,4 +33,10 @@ pipeline {
 		}	
 		}
 }
+post {
+        always {
+            // Clean up and post-build actions
+            cleanWs()
+        }
+    }
 }
