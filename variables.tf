@@ -24,14 +24,17 @@ variable "clientid" {
 variable "clientsecret" {
   type        = string
   description = "The username for the local account that will be created on the new VM."
-  default     = "9pe8Q~opA2Ba01cQadpfuKlArRr9RXe.GNDPAb5b"}
+  default     = "9pe8Q~opA2Ba01cQadpfuKlArRr9RXe.GNDPAb5b"
+}
 
 variable "tenantid" {
   type        = string
   description = "The username for the local account that will be created on the new VM."
-  default     = "84f1e4ea-8554-43e1-8709-f0b8589ea118"}
+  default     = "84f1e4ea-8554-43e1-8709-f0b8589ea118"
+}
 
 variable "subid" {
   type        = string
   description = "The username for the local account that will be created on the new VM."
-  default     = "2213e8b1-dbc7-4d54-8aff-b5e315df5e5b"}
+  default     = "2213e8b1-dbc7-4d54-8aff-b5e315df5e5b"
+}
