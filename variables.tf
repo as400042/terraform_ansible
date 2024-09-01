@@ -14,13 +14,12 @@ variable "username" {
   type        = string
   description = "The username for the local account that will be created on the new VM."
   default     = "azureadmin"
-
-
+}
 variable "client_id" {
   type        = string
   description = "The username for the local account that will be created on the new VM."
-  default     = "d83cb496-a471-4df9-9b85-a0ccf46f2257"}
-
+  default     = "d83cb496-a471-4df9-9b85-a0ccf46f2257"
+}
 
 variable "client_secret" {
   type        = string
