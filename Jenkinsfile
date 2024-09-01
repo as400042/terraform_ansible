@@ -17,7 +17,6 @@ pipeline {
                 script {
                     // Initialize Terraform
 		echo "this is init test"
-                    sh 'terraform init'
                     sh 'terraform init -upgrade'
                 }
 }
