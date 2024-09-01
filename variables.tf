@@ -15,23 +15,23 @@ variable "username" {
   description = "The username for the local account that will be created on the new VM."
   default     = "azureadmin"
 }
-variable "client_id" {
+variable "clientid" {
   type        = string
   description = "The username for the local account that will be created on the new VM."
   default     = "d83cb496-a471-4df9-9b85-a0ccf46f2257"
 }
 
-variable "client_secret" {
+variable "clientsecret" {
   type        = string
   description = "The username for the local account that will be created on the new VM."
   default     = "9pe8Q~opA2Ba01cQadpfuKlArRr9RXe.GNDPAb5b"}
 
-variable "tenant_id" {
+variable "tenantid" {
   type        = string
   description = "The username for the local account that will be created on the new VM."
   default     = "84f1e4ea-8554-43e1-8709-f0b8589ea118"}
 
-variable "sub_id" {
+variable "subid" {
   type        = string
   description = "The username for the local account that will be created on the new VM."
   default     = "2213e8b1-dbc7-4d54-8aff-b5e315df5e5b"}
