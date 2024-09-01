@@ -5,7 +5,9 @@ pipeline {
         stage('Checkout Code') {
             steps {
                 // Checkout the Terraform code from the repository
-                git credentialsId: 'your-git-credentials-id', url: 'https://github.com/your-repo/terraform-code.git'
+                git branch: 'main',
+                        credentialsId: 'ankit01-uname',
+                        url: 'https://github.com/as400042/terraform_ansible.git'
 		echo "checkout completed"
             }
         }
