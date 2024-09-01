@@ -115,7 +115,7 @@ resource "azurerm_linux_virtual_machine" "my_terraform_vm" {
 
   admin_ssh_key {
     username   = var.username
-    public_key = azapi_resource_action.ssh_public_key_gen.output.publicKey
+    public_key = tls_private_key.ssh_key.public_key_openssh
   }
 
   boot_diagnostics {

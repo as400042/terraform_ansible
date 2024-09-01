@@ -1,17 +1,13 @@
-resource "random_pet" "ssh_key_name" {
-  prefix    = "ssh"
-  separator = ""
+resource "tls_private_key" "ssh_key" {
+  algorithm = "RSA"
+  rsa_bits  = 4096
 }
 
-resource "azurerm_ssh_public_key" "ssh_key" {
-  name                = random_pet.ssh_key_name.id
-  location            = azurerm_resource_group.rg.location
-  resource_group_name = azurerm_resource_group.rg.name
-
-  depends_on = [azurerm_resource_group.rg]
+output "public_key" {
+  value = tls_private_key.ssh_key.public_key_openssh
 }
 
-output "key_data" {
-  value = azurerm_ssh_public_key.ssh_key.public_key
+output "private_key_pem" {
+  value     = tls_private_key.ssh_key.private_key_pem
+  sensitive = true
 }
-
