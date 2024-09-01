@@ -25,6 +25,9 @@ pipeline {
                     // Initialize Terraform
                     sh 'terraform plan'
                 }
+			
+		}	
+		}
             }
         }
 
