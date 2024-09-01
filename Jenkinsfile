@@ -19,6 +19,12 @@ pipeline {
 		echo "this is init test"
                     sh 'terraform init'
                 }
+        stage('Terraform Plan') {
+            steps {
+                script {
+                    // Initialize Terraform
+                    sh 'terraform plan'
+                }
             }
         }
 
