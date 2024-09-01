@@ -12,6 +12,11 @@ terraform {
   }
 }
 
+
+provider "azapi" {
+  # Configuration options for the provider, if needed.
+}
+
 # Configure the Microsoft Azure Provider
 provider "azurerm" {
   features {}
